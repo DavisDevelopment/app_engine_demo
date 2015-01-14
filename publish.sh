@@ -1,3 +1,3 @@
 
-appcfg.py -A lofty-proton-824 --oauth2 update .
+cd ../ && appcfg.py -A lofty-proton-824 update default/ && cd default
 

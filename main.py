@@ -5,10 +5,6 @@ app.config['DEBUG'] = True
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
 
-f = open('logs.txt', 'w', 1)
-f.write( "I am at least being invoked" )
-f.close()
-
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
@@ -19,3 +15,10 @@ def hello():
 def page_not_found(e):
     """Return a custom 404 error."""
     return 'Sorry, nothing at this URL.', 404
+
+@app.errorhandler(500)
+def page_fucked_up(e):
+    return "This shit is FUCKED UP, brah!"
+
+
+print "__ cheeks :3 __"
