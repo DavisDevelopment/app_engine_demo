@@ -5,6 +5,9 @@ app.config['DEBUG'] = True
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
 
+f = open('logs.txt', 'w', 1)
+f.write( "I am at least being invoked" )
+f.close()
 
 @app.route('/')
 def hello():
